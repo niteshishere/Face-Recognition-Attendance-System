@@ -10,10 +10,10 @@ Original file is located at
 import pickle
 
 # Unpickle the file
-with open(r'C:/Users/saumy/OneDrive/Desktop/ashifaceprojet/ashifaceprojet/data/images.p', "rb") as f:
+with open(r'C:/Users/KIIT0001/Desktop/New folder/New folder/Data/images.p', "rb") as f:
   images = pickle.load(f)
 
-with open(r'C:/Users/saumy/OneDrive/Desktop/ashifaceprojet/ashifaceprojet/data/labels.p', "rb") as f:
+with open(r'C:/Users/KIIT0001/Desktop/New folder/New folder/Data/labels.p', "rb") as f:
   labels = pickle.load(f)
 
 print(images.shape)
@@ -80,7 +80,7 @@ model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Flatten())
 model.add(Dense(4096, activation="relu"))
 
-model.add(Dense(1, activation="softmax"))
+model.add(Dense(2, activation="softmax"))
 model.compile(RMSprop(learning_rate=0.0001), loss="categorical_crossentropy", metrics=['accuracy'])
 
 model.summary()
